@@ -1,0 +1,384 @@
+.read {
+cursor: not-allowed;
+}
+
+.page-header {
+word-wrap: break-word;
+}
+
+.page-header * {
+max-width:98%;
+}
+
+.page-header a:link,.page-header a:visited,.page-header a:hover,.page-header a:focus,.page-header a:active {
+color:black;
+text-decoration:underline;
+background-color: white !important;
+}
+
+img.border {
+min-width: 100px;
+}
+
+.page-header img{
+max-width:100%;
+}
+
+#cookieAlertText,#cookieAlertButton, #cookiesAlert {
+background-color:#FFFFFF !important;
+}
+
+}
+
+#main {
+	margin-top: 10px;
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00d9ff; }
+
+
+
+
+
+
+.panel-body {
+background-color:#F7F4F2
+}
+
+
+
+#center {
+position:relative;
+width: 90%;
+
+
+
+}
+
+.article-container{
+	border-radius: 3px ;
+	background-color: #F7F4F2;
+
+}
+
+.blog-sidebar {
+	padding-top: 50px;
+}
+
+
+
+.navbar {
+	color:#FF0000;
+
+}
+
+.blog-post h1{
+	text-align:center;
+	color: black;
+	border-radius: 3px;
+}
+
+.loginform {
+	float: right;
+}
+
+.loginform ul {
+	padding: 0:
+	margin: 0:
+}
+
+.loginform li {
+	position: fixed;
+	float: left;
+}
+
+.loginform label {
+	display: block;
+	color: #DEDEDE:
+}
+
+.cf:before,
+.cf:after {
+	content: "";
+	display: table:
+}
+
+.cf:after{
+	clear: both;
+}
+
+.loginform input:not([type=submit]) {
+	padding: 5px;
+	margin-right: 10px;
+}
+
+.loginform input[type=submit] {
+	border: 1px solid rgba(0,0,0,0.3);
+	background: #64c8ef;	/*old browsers*/
+	background: -moz-linear-gradient(top, #64c8ef 0%, #00a2e2 100%);/*firefox*/
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #64c8ef), color-stop(100%, #00a2e2));/*chrome, safari*/
+	background: -webkit-linear-gradient(top, #64c8ef 0%, #00a2e2 100%); /*Chrome 10+, Safari 5.1+*/
+	background: -o-linear-gradient(top, #64c8ef 0%, #00a2e2 100%); /*Opera*/
+	background: -ms-linear-gradient(top, #64c8ef 0%, #00a2e2 100%); /*IE*/
+	background: linear-gradient(to bottom, #64c8ef 0%, #00a2e2 100%): /*W3C*/
+	filter: progid:DXImageTransform.Microsoft.gradient*startColorstr='#64c8ef', endColorstr='#00a2e2', GradientType=0); /*older IE*/
+	color: #fff;
+	padding: 5px 15px:
+	margin-right: 0;
+	margin-top: 6px;
+	border-radius: 3px;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.3);
+}
+
+.loginform lable {
+	color: #999999;
+}
+
+#login1 {
+float:right;
+}
+
+.article-container {
+margin-top: 3%;
+padding:1%;
+text-align:justify;
+overflow:auto;
+}
+
+.blog-sidebar {
+position:fixed;
+left:65%;
+}
+.panel-title{
+color:#777;
+}
+
+.jumbotron {
+	background: linear-gradient(to bottom right, #0066ff, white);
+	border: 2px solid black;
+}
+
+#title_spot {
+	text-align: center;
+	margin-top: 70px;
+}
+
+#logo-easyrash {
+	cursor: pointer;
+}
+
+#error {
+	color: rgb(255, 0, 0);
+	font-weight: bold;
+}
+
+#note-creator {
+	border: 2px solid #990099;
+}
+
+.fabiovitaliuniboit {
+	background-color: rgba(255, 255, 0, 0.6);
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.angelodiioriouniboit {
+	background-color: rgba(127, 255, 0, 0.6);
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.silvioperoniuniboit {
+	background-color: rgba(200, 119, 255, 0.6);
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.jessicajonesaliascom {
+	background-color: #e56095;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.vanessaiveshellcom {
+	background-color: #e14a69;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.lyrabelaquaoxcom {
+	background-color: #afabd5;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.aliceliddellwhiterabbitcom {
+	background-color: #4a7c65;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.arthurdentfishcom {
+	background-color: #102e1b;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.arabellastrangeyorkcom {
+	background-color: #115494;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.johnconstantinehellcom {
+	background-color: #3c9de5;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.alejandragonzalezbeltranexamplecom {
+	background-color: #3b6f3c;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.alessiabardiexamplecom {
+	background-color: #a7de40;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.alexwadeexamplecom {
+	background-color: #2a5452;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.anastasiadimouexamplecom {
+	background-color: #981015;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.andreanuzzoleseexamplecom {
+	background-color: #31a1dd;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.francescoosborneexamplecom {
+	background-color: #e9571e;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.francescopoggiuniboit {
+	background-color: #ecf250;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.jzhaoexamplecom {
+	background-color: #b28c34;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.mathsemanticwebexamplecom {
+	background-color: #7febac;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.mikeexamplecom {
+	background-color: #708195;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.pgrothexamplecom {
+	background-color: #1801e0;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.paolociancariniexamplecom {
+	background-color: #19c62d;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.paolomanghiexamplecom {
+	background-color: #b9cf58;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.raffaelegiannellaexamplecom {
+	background-color: #4d5dc0;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.tokhunexamplecom {
+	background-color: #6ab77f;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.vahdatiexamplecom {
+	background-color: #66d769;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+#save {
+	border: 2px solid #00cc00;
+}
+#unsaved{
+	border: 2px solid #ff6600;
+}
+
+.conf-list:hover {
+	text-decoration: none;
+	color: #333333;
+}
+
+.conf-list{
+	color: #333333;
+}
+
+.conf-doc {
+	font-style: italic;
+}
+
+.modal-title{
+	color: #0066ff;
+}
+
+.modal-header  h2, h4 {
+	color: #0066ff;
+}
+
+ul{
+	list-style-type: none;
+}
