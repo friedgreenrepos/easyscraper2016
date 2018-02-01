@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Login</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Css Login -->
+  <link href="./dist/css/login-style.css" rel="stylesheet">
+  <!-- Custom Fonts -->
+  <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!--Page Icon -->
+  <link rel="icon" type="image/vnd.microsoft.icon" href="./favicon.ico">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+
+      <div class="row">
+        <div class="iconmelon">
+          <img src="easyrash_logo.png" width="220" height="220">
+        </div>
+      </div>
+
+      <div class="panel panel-default" >
+        <div class="panel-heading">
+          <div class="panel-title text-center">Accedi ad EasyRash</div>
+        </div>
+
+        <div class="panel-body" >
+
+          <form name="form" id="form" class="form-horizontal" enctype="multipart/form-data" method="POST">
+
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <input id="user" type="text" class="form-control" name="username" value="" placeholder="User">
+            </div>
+
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+
+            <div class="form-group">
+              <!-- Button -->
+              <div class="col-sm-12 controls">
+                <button type="button" href="#" class="btn btn-primary" id="loginbtn"><i class="glyphicon glyphicon-log-in"></i> Log in</button>
+                <div style="float:right">
+                  <a class="account-link" style="cursor: pointer" data-toggle="modal" class="sub-btn" data-target="#cambia-dati">Gestione Account</a> </br>
+                  <a class="account-link" style="cursor: pointer" data-toggle="modal" class="sub-btn" data-target="#registrazione">Registrati</a>
+                </div>
+              </div>
+
+            </div>
+            <p id="error"></p>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Modal -->
+  <div id="registrazione" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" id="header-registrazione">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3>Registrazione</h3>
+        </div>
+        <div class="modal-body" id="body-recensione">
+          <p>Inserisci la tua email: <input type="email" id="email" style="float:right"/></p>
+          <p>Inserisci il tuo nome: <input id="name-registration" type="text" style="float:right"/></p>
+          <p>Inserisci il tuo cognome: <input id="surname-registration" type="text" style="float:right"/></p>
+          <p>Inserisci il tuo sesso: <span style='float:right'> Maschio <input name="sesso" type="radio" id="sesso" value="male"> Femmina <input name="sesso" type="radio" id="sesso" value="female"></p>
+            <p>Inserisci la password:  <input id="password-registration"type="password" style="float:right"/></p>
+            <p>Conferma la password:  <input id="password-registration2" type="password" style="float:right"/></p> <br>
+            <button type="button" class="btn btn-default" style='float:right' id="registrati">Registrati</button>
+            <br> <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div id="conferma-registrazione" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header" >
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3>Conferma la registrazione </h3>
+          </div>
+          <div class="modal-body" id="body-recensione">
+            <p>Clicca per ricevere una email all'indirizzo: <span id="email-conferma" ></span></p>
+            <button type="button" class="btn btn-default" id="ricevi-codice">Ricevi codice</button>
+            <br> <br>
+            <input type="text" id="inserisci-codice"> <input style='float:right' type="button" id="conferma-codice" value="Conferma codice">
+            <br> <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div id="cambia-dati" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header" >
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3>Accedi e modifica i tuoi dati</h3>
+          </div>
+          <div class="modal-body" id="body-recensione">
+            <p>Email:  <input type='email' id='email-accedi' style='float:right'/></p>
+            <p>Password:  <input type='password' id='password-accedi' style='float:right'/></p>
+            <br> <br>
+            <button type="button" class="btn btn-default" style='float:right' id="accedi">Accedi</button>
+            <br> <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div id="modifica-dati" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header" >
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3>Modifica dati o conferma password</h3>
+          </div>
+          <div class="modal-body" id="body-recensione">
+            <button type="button" style='float:right' class="btn btn-default" id="conferma-pass">Conferma la password</button> <br>
+            <hr><h4>I campi vengono modificati solo se ci scrivi qualcosa</h4>
+            <p>Inserisci il tuo nome: <input id="name-modifica" type="text" style="float:right"/></p>
+            <p>Inserisci il tuo cognome: <input id="surname-modifica" type="text" style="float:right"/></p>
+            <p>Inserisci il tuo sesso: <span style='float:right'> Maschio <input name="sesso-modifica" type="radio" id="sesso-modifica" value="male"> Femmina <input name="sesso-modifica" type="radio" id="sesso-modifica" value="female"></p>
+              <p>Inserisci la password:  <input id="password-modifica" type="password" style="float:right"/></p>
+              <p>Conferma la password:  <input id="password-modifica2" type="password" style="float:right"/></p> <br>
+              <br> <br>
+              <button type="button" class="btn btn-default" style='float:right' id="modificadati">Modifica i dati</button>
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </body>
+
+    <!-- jQuery -->
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Login -->
+    <script src="./registrazione/login.js"></script>
+
+    </html>

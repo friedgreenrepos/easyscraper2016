@@ -12,7 +12,6 @@ Don't misuse EasyRash, read  the README!
 
 * Download EasyRash files
 * You'll need a hosting server to make it work
-* Also this app needs [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/download/) to work properly, so be sure to download it.
 * Start the app (if doesn't start automatically) by opening index.html in your browser
 * Start making annotations!
 

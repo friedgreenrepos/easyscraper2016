@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content=""><meta name="author" content=""><title>EasyRash</title><!-- Bootstrap Core CSS --><link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"><!-- MetisMenu CSS --><link href="./bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet"><!-- Custom CSS --><link href="./dist/css/sb-admin-2.css" rel="stylesheet"><!-- Custom Fonts --><link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"><!-- Css Easyrash --><link href="./dist/css/easyrash.css" rel="stylesheet"><!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --><!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]--><!-- Favicon --><link rel="icon" type="image/vnd.microsoft.icon" href="./favicon.ico"></head><body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0"><div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand reloader" id="logo-easyrash">
+                <i><img src="logo_piccolo.gif" alt="logoRaschietto" id="logo"></i> EasyRash</a>
+
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right"><li class="dropdown">
+                    <a class="dropdown-toggle reader" data-toggle="dropdown" href="#" id="reader-annotator">
+						<i id="ra-text"> Reader </i>
+						<i class="fa fa-exchange fa-fw"></i>
+                    </a>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<i> Informazioni </i>
+						<i class="fa fa-question fa-fw"></i>
+						<i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user"><li>
+                            <a href="#" id="guide" data-toggle="modal" data-target="#guide-modal">
+                                <div>
+                                    <i class="fa fa-gears fa-fw"></i> Come si usa
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider">
+                        </li><li>
+                            <a data-toggle="modal" data-target="#contact-modal" href="#">
+                                <div>
+                                    <i class="fa fa-group  fa-fw"></i> Chi siamo
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul><!-- /.dropdown-alerts --></li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					<i id="user-id"></i>
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user"><li>
+                          <a href="#" id="logout"><i class="fa fa-sign-out fa-fw"></i>
+                           Logout
+                          </a>
+                        </li>
+                    </ul><!-- /.dropdown-user --></li>
+                <!-- /.dropdown -->
+            </ul><!-- /.navbar-top-links --><div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+						<li>
+                            <a href="#"><i class="fa fa-folder-open-o fa-fw"></i> Documenti <span class="fa arrow"></span></a>
+                            <ul id="doc-list" class="nav"></ul><!-- /.nav-second-level --></li>
+                        <li>
+                            <a href="#3"><i class="fa fa-filter fa-fw"></i> Filtri <span class="fa arrow"></span></a>
+							<ul id="filters" class="nav"></ul></li>
+						<li>
+							<a href="#5" id="note-creator" data-toggle="modal" data-target="#annotation-modal"><i class="fa fa-pencil fa-fw"></i> Crea Annotazione </a>
+						</li>
+						<li>
+							<a href="#5" id="save"><i class="fa fa-save fa-fw" ></i> Salva </a>
+						</li>
+						<li>
+							<a href="#6" id="unsaved"><i class="fa fa-paperclip fa-fw"></i> Note da Salvare </a>
+						</li>
+						<li>
+							<a href="#" id="review" data-toggle="modal" data-target="#review-modal"><i class="fa fa-thumbs-o-up fa-fw" ></i> Recensioni</a>
+						</li>
+						<li>
+							<a href="#" id="chair-review" data-toggle="modal" data-target="#chair-review-modal"><i class="fa fa-thumbs-o-up fa-fw"></i> Recensioni </a>
+						</li>
+                        
+						
+						 
+						
+                   </ul></div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav><!-- Modal Annotazione--><div class="modal fade" id="annotation-modal" role="dialog">
+			<div class="modal-dialog">
+
+			<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Inserisci un'annotazione</h4>
+					</div>
+					<div class="modal-body">
+						<p id="selected-text"></p>
+					</div>
+					<div class="modal-footer">
+						<textarea class="form-control" id="text-comment" placeholder="Inserisci un commento alla nota" style="min-width: 100%"></textarea><br><button type="button" class="btn btn-default" data-dismiss="modal" id="insert">Inserisci Annotazione</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal modifica -->
+		<div class="modal fade" id="edit-modal" role="dialog">
+			<div class="modal-dialog">
+
+			<!-- Modal content -->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h2 class="modal-title">Modifica annotazione</h2>
+					</div>
+					<div class="modal-body">
+						<h4> Testo nota </h4> 
+						<p id="note-text"></p> 
+						<h4> Commento </h4> 
+						<p id="note-comment"></p>
+					</div>
+					<div class="modal-footer" id="edit-panel" hidden>
+						<textarea class="form-control" id="text-comment" placeholder="Inserisci un commento alla nota" style="min-width: 100%"></textarea><button class="btn btn-default" data-dismiss="modal" id="edit">Modifica Annotazione</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal" id="delete">Elimina Annotazione</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal Contatti-->
+		<div class="modal fade" id="contact-modal" role="dialog">
+			<div class="modal-dialog">
+
+			<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h2 class="modal-title">Chi siamo</h2>
+					</div>
+					<div class="modal-body">
+						<h4 class="testo_contatti">Luca Federzoni           email: luca.federzoni2@studio.unibo.it</h4> <br><h4 class="testo_contatti">Giulia Calanca           email: giulia.calanca@studio.unibo.it</h4>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Chiudi</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal Guida-->
+		<div class="modal fade" id="guide-modal" role="dialog">
+			<div class="modal-dialog">
+
+			<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h2 class="modal-title">Guida</h2>
+					</div>
+					<div class="modal-body">
+						<h3>Lista documenti e filtri</h3>
+						<p>Sulla colonna di sinistra sono elencate tutte le conferenze di cui l'utente fa parte con
+						il relativo ruolo(autore, reviewer o chair). Cliccando su un documento, esso verr&agrave; visualizzato 
+						nell'area principale della pagina. Una volta caricato, sar&agrave; possibile attivare o disattivare i filtri.
+						I "<span class="fa fa-filter fa-fw"></span> Filtri", situati sotto l'area documenti, permettono di mostrare o nascondere le annotazioni fatte dagli utenti.
+						E' sufficiente clickare su un filtro per attivarlo o disattivarlo.
+						</p>
+						<h3>Barra superiore</h3>
+						<p>Attraverso la barra superiore viene visualizzato il nome del utente attualmente collegato ed &egrave; 
+						possibile effettuare il logout. Dopo aver aperto un documento, viene visualizzata la modalit&agrave; con cui si sta 
+						visualizzando il documento(reader, annotator). Cliccando su di essa (indicata dall'icona <span class="fa fa-exchange fa-fw"></span>) 
+						si passa all'altra modalit&agrave;. 
+						<i>Reader</i> permette soltanto di visualizzare il documento, mentre <i>Annotator</i> permette di modificarlo. 
+						<b>NB:</b> non &egrave; possibile passare alla modalit&agrave; annotatore se un altro utente collegato sta gi&agrave; modificando
+						il documento selezionato.
+						</p><h3>Dettaglio Annotazione</h3>
+						Inoltre facendo doppio click su un commento, riconoscibile grazie al fatto che &egrave; evidenziato con un 
+						colore, si visulizzer&agrave; sempre il commento relativo. Verranno visualizzati il testo evidenziato e il 
+						relativo commento, inoltre se si &egrave; in modalit&agrave; annotatore e si &egrave; il proprietario del 
+						commento sar&agrave; possibile modificarlo o cancellarlo
+						<h3>Autore, reviewer, chair</h3>
+						<p>Gli autori possono soltanto creare delle annotazioni sui frammenti del testo, come tutti gli altri ruoli. 
+						I reviewer possono inserire una recensione testuale globale sul documento e dire se per loro l'articolo vada 
+						accettato o rifiutato. I chair, clickando su <span class="fa fa-thumbs-o-up fa-fw"></span> Recensioni, visualizzano i vari documenti di una conferenza con 
+						uno sfondo diverso: 
+						<span style="color: orange">arancione</span> se alcuni reviewer devono ancora finire la loro recensione, 
+						<span style="color: blue">blu</span> se	l'hanno finita. In questo caso il chair pu&ograve; esprimere la decisione 
+						finale sul documento. E a seguito di essa il colore del documento sar&agrave; 
+						<span style="color: lime">verde</span> se &egrave stato accettato o <span style="color: red">rosso</span>
+						in caso di rifiuto. </p>
+						<h3>Creare annotazioni sul testo</h3>
+						<p>Per fare questo bisogna selezionare un frammento di testo valido e fare click sul bottone "<span class="fa fa-pencil fa-fw"></span> Crea Annotazione" 
+						a quel punto sar&agrave; possibile inserire un commento. Per modificare o cancellare un proprio precendente commento 
+						baster&agrave; fare doppio click sulla propria nota e selezionare l'opzione desiderata oppure fare click sull'elemento
+						"<span class="fa fa-paperclip fa-fw"></span> Note da salvare", sempre della barra superiore, in questo modo verrano elencate 
+						tutte le modifiche effettuate ancora non salvate. Dopo ogni modifica effettuata, anche sulle recensioni, &egrave; necessario 
+						che vengano salvate ("<span class="fa fa-save fa-fw"></span> Salva") per renderle effettive.</p>
+						<h3>Recensioni e decisione chair </h3>
+						<p>Se si apre un documento in cui si &egrave; reviewer o chair o entrambi. In modalit&agrave; annotator si ha a 
+						disposizione pi&ugrave; operazioni, visibili nell'area laterale, sotto la voce   
+						"<span class="fa fa-thumbs-o-up fa-fw"></span> Recensioni", che permette al 
+						chair di dare il giudizio finale oppure a un reviewer di valutare un articolo. Inoltre, 
+						cliccando su "<span class="fa fa-thumbs-o-up fa-fw"></span> Recensioni" l'utente chair vede tutte le recensioni fatte dai reviewer e basandosi su quelle sceglie 
+						se l'articolo debba essere rifiutato o accettato. Se un utente &egrave; reviewer di un articolo facente parte 
+						una conferenza di cui &egrave; chair &egrave; oppurtuno che prima svolga il ruolo di reviewer e poi se anche 
+						gli altri reviewer hanno completato la loro recensione pu&ograve; procedere alla decisione finale.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--Modale note non salvate o cancellate-->
+		<div id="unsaved-modal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+			<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h2 class="modal-title" style="text-align: center">Note non ancora salvate</h2>
+					</div>
+					<div class="modal-body" id="unsaved-field">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--Modale recensione-->
+		<div id="review-modal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+			<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header" id="review-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body" id="review-body">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--Modale recensione da approvare-->
+		<div id="chair-review-modal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+			<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header" id="chair-review-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body" id="chair-review-body">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+        <!-- Page Content -->
+          <div id="page-wrapper">
+            <div class="container-fluid">
+               <div class="row">
+                <!-- <div class="row"> -->
+                 <div class="col-lg-12 col-md-11">
+				 <div class="jumbotron" id="title_spot"><h2>Welcome to EasyRash</h2></div>
+              <div class="page-header" id="main">
+				<div>
+					<h3 style="text-align: center">EasyRash permette di gestire articoli di pi&ugrave; conferenze, condividendo 
+						note e giudizi di pi&ugrave; utenti sullo stesso articolo. EasyRash facilita l'esprimere l'accettazione 
+						o il rifiuto di un articolo presentato ad una conferenza, facendo in modo che i recensori ne diano 
+						una valutazione personale e sar&agrave; poi compito del chair, osservando le recensioni, darne 
+						una valutazione finale. </h3>
+					<h3 style="text-align: center"> Apri un documento per cominciare </h3>
+					<h3 style="text-align: center"> Se serve aiuto fare click su <span class="fa fa-question fa-fw"></span><i style="color: ">Informazioni</i> e successivamente su
+					<span class="fa fa-gears fa-fw"></span><i style="color: ">Come si usa</i></h3>
+				</div>
+				</br>
+				<div style="border-radius: 100%; height: 20%; width: 20%; position: relative; left: 40%">
+              				<img src="easyrash_logo.png" style="border-radius: 120px">
+              			</div>
+              </div>
+
+                    </div>
+                    <!-- /.col-lg-12 -->
+                  </div>
+                  <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script><!-- Bootstrap Core JavaScript --><script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script><!-- Metis Menu Plugin JavaScript --><script src="./bower_components/metisMenu/dist/metisMenu.min.js"></script><!-- Custom Theme JavaScript --><script src="./dist/js/sb-admin-2.js"></script><!-- Carica i documenti --><script src="./js/doclist.js"></script><!-- Mostra i documenti --><script src="./js/doc-loader.js"></script><!-- script principale --><script src="./js/script.js"></script><!-- script per il recuper di informazioni --><script src="./js/fetch.js"></script><!-- script per la gestione dei lock --><script src="./lock/lockmanager.js"></script>
+    </body></html>
