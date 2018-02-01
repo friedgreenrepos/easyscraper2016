@@ -12,6 +12,7 @@ Don't misuse EasyRash, read  the README!
 
 * Download EasyRash files
 * You'll need a hosting server to make it work
+* You'll also need [PHPMailer](https://github.com/PHPMailer/PHPMailer) and [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/download/) so be sure to download them.
 * Start the app (if doesn't start automatically) by opening index.html in your browser
 * Start making annotations!
 
