@@ -6,7 +6,6 @@ Don't misuse EasyRash, read  the README!
 
 * This web app is called EasyRash, its main purpose is to create annotations.
 * Also, as you log in, you'll be able tu review articles and, only if you're an article chair, examinate other author's reviews and confirm them.
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up? ###
 
